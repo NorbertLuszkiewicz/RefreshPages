@@ -11,6 +11,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
+  refreshPages(pagesToRefresh);
   console.log(`Server running at http://${hostname}:${port}/`);
 });
 
