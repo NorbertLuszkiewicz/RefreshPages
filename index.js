@@ -16,7 +16,9 @@ const refreshPages = urls => {
 
 const sendRequest = url => {
   console.log(`kolejny refresh`);
-  fetch(url).then(res => console.log(res, "poszedł get na url"));
+  fetch(url)
+    .then(res => res.text())
+    .then(res => console.log(res, "poszedł get na url"));
 };
 
 refreshPages(pagesToRefresh);
